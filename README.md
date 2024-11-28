@@ -53,7 +53,9 @@ L'application utilise Grist pour gérer les données d'audit. Suivez ces étapes
 
 L'application utilise Grist comme backend pour gérer les données d'audit. Grist centralise les questions, catégories et réponses dans un document dédié, permettant une gestion fluide et structurée des audits techniques.
 
-Ce document Grist est préconfiguré pour fonctionner avec l'application. Un exemple exporté est disponible dans le dossier grist-document de ce dépôt et peut être importé dans votre compte Grist. Il contient un ensemble de questions et un produit de test pour faciliter la mise en place de l'outil en local.
+Ce document Grist est préconfiguré pour fonctionner avec l'application. Un exemple exporté est disponible dans le dossier `grist-template/` de ce dépôt et peut être importé dans votre compte Grist. Il contient un ensemble de questions et un produit de test pour faciliter la mise en place de l'outil en local.
+
+Le process pour réaliser un audit est documenté sur le Notion de l'incubateur des territoires : https://incubateurdesterritoires.notion.site/Audits-techniques-Processus-11f744bf03dd80c490cccdf316fe0248
 
 ## Processus de publication
 
