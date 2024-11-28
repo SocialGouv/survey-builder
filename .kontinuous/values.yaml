@@ -1,5 +1,5 @@
 app:
-  probesPath: /healthz
+  probesPath: /
   containerPort: 3000
   envFrom:
     - secretRef:
