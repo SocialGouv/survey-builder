@@ -1,4 +1,5 @@
 app:
+  ~needs: [build-app]
   probesPath: /
   containerPort: 3000
   envFrom:
@@ -6,15 +7,6 @@ app:
         name: app
     - configMapRef:
         name: app
-
-  ~needs: [build-app]
-  ingress:
-    annotations:
-      nginx.ingress.kubernetes.io/configuration-snippet: |
-        more_set_headers "Content-Security-Policy: default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; img-src 'self'; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'";
-        more_set_headers "X-Frame-Options: deny";
-        more_set_headers "X-XSS-Protection: 1; mode=block";
-        more_set_headers "X-Content-Type-Options: nosniff";
 
 jobs:
   runs:
