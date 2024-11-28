@@ -1,0 +1,10 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: app
+data:
+  GRIST_URL: "https://socialgouv.getgrist.com/api"          # For example https://grist.incubateur.anct.gouv.fr/api
+
+  SENTRY_ORG: "incubateur"
+  SENTRY_PROJECT: "survey-builder"
+  SENTRY_URL: "https://sentry.fabrique.social.gouv.fr"

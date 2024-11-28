@@ -1,0 +1,3 @@
+# Protect workflow files
+.github @socialgouv/sre
+.kontinuous @socialgouv/sre
