@@ -16,6 +16,9 @@ jobs:
       use: build
       with:
         imagePackage: app
+        buildArgs:
+          GRIST_URL: "example.org"
+          GIRST_DOC_ID: "3"
         secrets:
           sentry_auth_token:
             secretName: sentry

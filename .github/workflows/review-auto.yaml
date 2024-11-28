@@ -4,12 +4,10 @@ on:
     branches:
       - "feat/**"
       - "fix/**"
-      - "chore/**"
 
 concurrency:
   cancel-in-progress: true
   group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.ref }}
-
 
 jobs:
   socialgouv:

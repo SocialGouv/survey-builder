@@ -12,12 +12,6 @@ RUN npm ci
 COPY . .
 
 # build time args
-ARG NEXT_PUBLIC_MATOMO_URL
-ENV NEXT_PUBLIC_MATOMO_URL $NEXT_PUBLIC_MATOMO_URL
-ARG NEXT_PUBLIC_MATOMO_SITE_ID
-ENV NEXT_PUBLIC_MATOMO_SITE_ID $NEXT_PUBLIC_MATOMO_SITE_ID
-ARG NEXT_PUBLIC_SENTRY_DSN
-ENV NEXT_PUBLIC_SENTRY_DSN $NEXT_PUBLIC_SENTRY_DSN
 ARG GRIST_URL
 ENV GRIST_URL $GRIST_URL
 ARG GRIST_DOC_ID
@@ -27,6 +21,7 @@ RUN --mount=type=secret,id=sentry_auth_token \
   --mount=type=secret,id=grist_api_key \
   export SENTRY_AUTH_TOKEN="$(cat /run/secrets/sentry_auth_token)"; \
   export GRIST_API_KEY="$(cat /run/secrets/grist_api_key)"; \
+  env && \
   npm run build
 
 
