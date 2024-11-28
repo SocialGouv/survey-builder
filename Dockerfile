@@ -1,4 +1,4 @@
-FROM node:22-alpine3.18 as base
+FROM node:22-alpine3.18 AS base
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
@@ -19,8 +19,10 @@ ENV GRIST_DOC_ID $GRIST_DOC_ID
 
 RUN --mount=type=secret,id=sentry_auth_token \
   --mount=type=secret,id=grist_api_key \
+  --mount=type=secret,id=grist_doc_id \
   export SENTRY_AUTH_TOKEN="$(cat /run/secrets/sentry_auth_token)"; \
   export GRIST_API_KEY="$(cat /run/secrets/grist_api_key)"; \
+  export GRIST_DOC_ID="$(cat /run/secrets/grist_doc_id)"; \
   env && \
   npm run build
 

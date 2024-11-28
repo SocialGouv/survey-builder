@@ -26,3 +26,6 @@ jobs:
           grist_api_key:
             secretName: app
             secretKey: GRIST_API_KEY
+          grist_doc_id:
+            secretName: app
+            secretKey: GRIST_DOC_ID
