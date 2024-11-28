@@ -23,7 +23,6 @@ RUN --mount=type=secret,id=sentry_auth_token \
   export SENTRY_AUTH_TOKEN="$(cat /run/secrets/sentry_auth_token)"; \
   export GRIST_API_KEY="$(cat /run/secrets/grist_api_key)"; \
   export GRIST_DOC_ID="$(cat /run/secrets/grist_doc_id)"; \
-  env && \
   npm run build
 
 
