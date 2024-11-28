@@ -1,4 +1,6 @@
-# Audit Technique - Incubateur des Territoires
+# Audit Technique
+
+_Ce dépôt a été fork depuis le projet de l'ANCT disponible [ici](https://gitlab.com/incubateur-territoires/incubateur/survey-builder)_
 
 Bienvenue dans l'outil d'audit technique de l'incubateur des territoires. Cet outil permet d'évaluer les startups pour les préparer aux comités d'investissement. L'objectif de l'audit est de rendre visible la dette technique et de garantir la pérennité des produits numériques développés.
 
@@ -19,21 +21,25 @@ Cette application est construite avec **Next.js** et utilise **react-dsfr** pour
 ## Installation
 
 1. Copiez le fichier d'exemple de configuration `.env.template` en `.env.local` :
+
    ```bash
    cp .env.template .env.local # Configure here your Grist server URL, API Key and doc ID
    ```
 
 2. Installez les dépendances :
+
    ```bash
    npm install
    ```
 
 3. Compilez l'application pour la production :
+
    ```bash
    npm run build
    ```
 
 4. Lancez l'application en mode développement :
+
    ```bash
    npm run dev
    ```
@@ -55,7 +61,7 @@ L'application utilise Grist comme backend pour gérer les données d'audit. Gris
 
 Ce document Grist est préconfiguré pour fonctionner avec l'application. Un exemple exporté est disponible dans le dossier `grist-template/` de ce dépôt et peut être importé dans votre compte Grist. Il contient un ensemble de questions et un produit de test pour faciliter la mise en place de l'outil en local.
 
-Le process pour réaliser un audit est documenté sur le Notion de l'incubateur des territoires : https://incubateurdesterritoires.notion.site/Audits-techniques-Processus-11f744bf03dd80c490cccdf316fe0248
+Le process pour réaliser un audit est documenté sur le Notion de l'incubateur des territoires : <https://incubateurdesterritoires.notion.site/Audits-techniques-Processus-11f744bf03dd80c490cccdf316fe0248>
 
 ## Processus de publication
 
